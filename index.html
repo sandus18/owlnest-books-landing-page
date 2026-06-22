@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>library</title>
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font family -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel:wght@400..900&family=Ole&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- tailwind css cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="w-full navBar">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center h-16 sm:h-[72px]">
+
+        <!-- Brand -->
+        <a href="#" class="flex items-center gap-3 shrink-0">
+          <div class="w-10 h-10 rounded-full border border-[#7a5f2a] bg-[#F8F3E9] flex items-center justify-center">
+            <img src="./images/logo.png" class="h-9" />
+          </div>
+          <div>
+            <h1 class="text-[#d4a832] text-sm font-semibold tracking-widest leading-tight">OwlNest Books</h1>
+          </div>
+        </a>
+
+        <!-- Spacer -->
+        <div class="flex-1"></div>
+
+        <!-- Desktop nav links -->
+        <div class="hidden sm:flex items-center gap-1">
+          <a href="#home"
+            class="text-[#d4a832] text-[11.5px] tracking-widest uppercase px-3 py-1.5 border-b-2 border-[#d4a832]">Home</a>
+          <a href="#realm"
+            class="text-[#b89a5a] text-[11.5px] tracking-widest uppercase px-3 py-1.5 border-b-2 border-transparent hover:text-[#d4a832] hover:border-[#d4a832]">Genre</a>
+          <a href="#shop"
+            class="text-[#b89a5a] text-[11.5px] tracking-widest uppercase px-3 py-1.5 border-b-2 border-transparent hover:text-[#d4a832] hover:border-[#d4a832]">Shop</a>
+            <a href="#more"
+            class="text-[#b89a5a] text-[11.5px] tracking-widest uppercase px-3 py-1.5 border-b-2 border-transparent hover:text-[#d4a832] hover:border-[#d4a832">More</a>
+          <a href="#contact"
+            class="text-[#b89a5a] text-[11.5px] tracking-widest uppercase px-3 py-1.5 border-b-2 border-transparent hover:text-[#d4a832] hover:border-[#d4a832">Contact</a>
+
+          <div class="w-px h-5 bg-[#3a2c10] mx-2"></div>
+
+          <button class="text-[#8a7040] hover:text-[#d4a832] p-1.5"><i class="fa-solid fa-bell"></i></button>
+          <button class="text-[#8a7040] hover:text-[#d4a832] p-1.5"><i class="fa-solid fa-user"></i></button>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        <label for="menu-toggle" class="sm:hidden cursor-pointer text-[#b89a5a]">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </label>
+
+        <!-- Mobile Menu -->
+        <div class="hidden peer-checked:block absolute top-full left-0 w-full z-50
+            bg-[#120d08]/95 backdrop-blur-md border-t border-[#3a2c10] sm:hidden">
+
+          <label for="menu-toggle" class="absolute top-6 right-6 text-3xl cursor-pointer">
+            &times;
+          </label>
+
+          <div class="px-6 py-8 flex flex-col gap-6">
+
+            <a href="#home" class="text-[#d4a832] text-lg font-medium">
+              Home
+            </a>
+            <a href="#realm" class="text-[#b89a5a] text-lg font-medium hover:text-[#d4a832]">
+              Genre
+            </a>
+            <a href="#shop" class="text-[#b89a5a] text-lg font-medium hover:text-[#d4a832]">
+              Shop
+            </a><a href="#more" class="text-[#b89a5a] text-lg font-medium hover:text-[#d4a832]">
+              More
+            </a>
+            <a href="#contact" class="text-[#b89a5a] text-lg font-medium hover:text-[#d4a832]">
+              Contact
+            </a>
+
+            <div class="flex gap-5 pt-4 border-t border-[#3a2c10]">
+              <i class="fa-solid fa-bell text-[#b89a5a]"></i>
+              <i class="fa-solid fa-user text-[#b89a5a]"></i>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section relative z-10 flex flex-col lg:flex-row items-center w-full px-8 sm:px-16 py-16 pb-20">
+
+    <!-- Background image -->
+    <div class="hero-bg-image absolute inset-0"></div>
+
+    <!-- Gradient overlay -->
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <!-- Top & bottom gold border lines -->
+    <div class="absolute top-0 left-0 right-0 h-[3px] bg-[#6b4f1e]"></div>
+    <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-[#6b4f1e]"></div>
+
+    <!-- Main content -->
+    <div class="relative z-10 flex-col lg:flex-row items-center w-full px-8 sm:px-16 py-16 pb-20">
+      <div class="max-w-xl">
+
+        <!-- Ornament -->
+        <span class="block text-[#8a6828] tracking-[8px] text-lg mb-4">— ✦ —</span>
+
+        <!-- Headline -->
+        <h1 class="hero-title text-[#e8d5a0] font-bold leading-[1.12] tracking-wide mb-5">
+          Books are<br>
+          Portals to<br>
+          <span class="text-[#c8a84b]">Other Worlds.</span>
+        </h1>
+
+        <!-- Ornamental divider -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-20 h-px bg-[#6b4f1e]"></div>
+          <div class="w-1.5 h-1.5 bg-[#c8a84b] rotate-45"></div>
+          <div class="w-20 h-px bg-[#6b4f1e]"></div>
+        </div>
+
+        <!-- Subtitle -->
+        <p class="hero-subtitle text-[#b09060] text-base italic leading-relaxed mb-8">
+          Rare tomes. Timeless tales.<br>Delivered to your realm.
+        </p>
+
+        <!-- CTA Button -->
+        <a href="#realm"
+          class="hero-btn inline-flex rounded  items-center gap-2.5 text-[11px] font-semibold tracking-[0.2em] uppercase text-[#c8a84b] border border-[#6b4f1e] px-7 py-3.5 hover:bg-[#2a1c08] hover:text-[#e8d5a0] transition-colors">
+          Browse the Collection
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- realm -->
+  <div id="realm" class="realm-section">
+    <div class="realm-header">
+      <div class="realm-header-line"></div>
+      <h2 class="realm-title">Shop by Realm</h2>
+      <div class="realm-header-line"></div>
+    </div>
+    <div class="realm-carousel flex flex-col lg:flex-row">
+      <!-- realm 1 -->
+      <div
+        class="realm-card min-w-[220px] flex-shrink-0 snap-start bg-[#e7d1ab] border-2 border-[#8b6a3e] rounded-md p-4 text-center hover:-translate-y-1 transition">
+        <img src="./images/fantasy.png" class="w-full h-34 object-fit rounded mb-3">
+
+        <h3 class="uppercase font-bold text-[#2a1c06]">
+          Fantasy
+        </h3>
+
+        <p class="text-[#5f4726] text-sm">
+          Books
+        </p>
+      </div>
+      <!-- realm 2 -->
+      <div
+        class="realm-card min-w-[220px] flex-shrink-0 snap-start bg-[#e7d1ab] border-2 border-[#8b6a3e] rounded-md p-4 text-center hover:-translate-y-1 transition">
+        <img src="./images/sci-fi.png" class="w-full h-44 object-cover rounded mb-3">
+
+        <h3 class="uppercase font-bold text-[#2a1c06]">
+          SCI-FI
+        </h3>
+
+        <p class="text-[#5f4726] text-sm">
+          Books
+        </p>
+      </div>
+      <!-- realm 3 -->
+      <div
+        class="realm-card min-w-[220px] flex-shrink-0 snap-start bg-[#e7d1ab] border-2 border-[#8b6a3e] rounded-md p-4 text-center hover:-translate-y-1 transition">
+        <img src="./images/classic.png" class="w-full h-44 object-cover rounded mb-3">
+
+        <h3 class="uppercase font-bold text-[#2a1c06]">
+          Classics
+        </h3>
+
+        <p class="text-[#5f4726] text-sm">
+          Timeless Reads
+        </p>
+      </div>
+
+      <!-- realm 4 -->
+      <div
+        class="realm-card min-w-[220px] flex-shrink-0 snap-start bg-[#e7d1ab] border-2 border-[#8b6a3e] rounded-md p-4 text-center hover:-translate-y-1 transition">
+        <img src="./images/rare.png" class="w-full h-44 object-cover rounded mb-3">
+
+        <h3 class="uppercase font-bold text-[#2a1c06]">
+          Rare Finds
+        </h3>
+
+        <p class="text-[#5f4726] text-sm">
+          Collector's Books
+        </p>
+      </div>
+      <!-- realm 5 -->
+      <div
+        class=" realm-card min-w-[220px] flex-shrink-0 snap-start bg-[#e7d1ab] border-2 border-[#8b6a3e] rounded-md p-4 text-center hover:-translate-y-1 transition">
+        <img src="./images/young.png" class="w-full h-44 object-cover rounded mb-3">
+
+        <h3 class="uppercase font-bold text-[#2a1c06]">
+          Young Adult
+        </h3>
+
+        <p class="text-[#5f4726] text-sm">
+          & Middle Grade
+        </p>
+      </div>
+      <!-- realm 6 -->
+      <div
+        class="realm-card min-w-[220px] flex-shrink-0 snap-start bg-[#e7d1ab] border-2 border-[#8b6a3e] rounded-md p-4 text-center hover:-translate-y-1 transition">
+        <img src="./images/world.png" class="w-full h-30 object-fit rounded mb-3">
+
+        <h3 class="uppercase font-bold text-[#2a1c06]">
+          world Buliding
+        </h3>
+
+        <p class="text-[#5f4726] text-sm">
+          Guides & Lore
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- shop -->
+  <section id="shop" class="bg-[#120d08] py-12 px-4 md:px-8">
+
+    <div class="text-center mb-10">
+      <h2 class="text-3xl md:text-4xl text-[#d4a373] font-serif uppercase tracking-wider">
+        Featured Tomes
+      </h2>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-6">
+
+      <!-- Card -->
+      <div class="w-[180px] bg-[#d8c29a] border border-[#8b6a3e] shadow-lg hover:-translate-y-2 transition">
+
+        <img src="./images/harrypotter.jpeg" alt="Book" class="w-full h-[260px] object-cover">
+
+        <div class="p-3">
+          <h3 class="text-sm font-semibold text-[#2a1c06]">
+            HARRY POTTER III
+          </h3>
+          <p class="text-xs text-[#5c4321] mt-1">
+            J.K. ROWLING
+          </p>
+          <div class="flex justify-between items-center mt-3">
+            <span class="font-bold text-[#2a1c06]">
+              $16.99
+            </span>
+
+            <button class="w-8 h-8 flex items-center justify-center">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="w-[180px] bg-[#d8c29a] border border-[#8b6a3e] shadow-lg">
+        <img src="./images/hobbit. Tolkien _ Book Cover" class="w-full h-[260px] object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold text-[#2a1c06]">The Hobbit</h3>
+          <p class="text-xs text-[#5c4321]">J.R.R. Tolkien</p>
+          <div class="flex justify-between mt-3">
+            <span class="font-bold">$14.99</span>
+            <button class="w-8 h-8 "><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[180px] bg-[#d8c29a] border border-[#8b6a3e] shadow-lg">
+        <img src="./images/lordofrings.jpeg" class="w-full h-[260px] object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold text-[#2a1c06]">THE LORD OF THE RINGS</h3>
+          <p class="text-xs text-[#5c4321]">J.R.R. Tolkien</p>
+          <div class="flex justify-between mt-3">
+            <span class="font-bold">$18.99</span>
+            <button class="w-8 h-8 "><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[180px] bg-[#d8c29a] border border-[#8b6a3e] shadow-lg">
+        <img src="./images/littlewomen.jpeg" class="w-full h-[260px] object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold text-[#2a1c06]">LITTLE WOMEN</h3>
+          <p class="text-xs text-[#5c4321]">LOUISA JAY ALCOTT</p>
+          <div class="flex justify-between mt-3">
+            <span class="font-bold">$15.99</span>
+            <button class="w-8 h-8 "><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-[180px] bg-[#d8c29a] border border-[#8b6a3e] shadow-lg">
+        <img src="images/pride.jpeg" class="w-full h-[260px] object-cover">
+        <div class="p-3">
+          <h3 class="text-sm font-semibold text-[#2a1c06]">PRIDE AND PREJUDICE</h3>
+          <p class="text-xs text-[#5c4321]">JANE AUSTEN</p>
+          <div class="flex justify-between mt-3">
+            <span class="font-bold">$17.99</span>
+            <button class="w-8 h-8"><i class="fa-solid fa-cart-shopping"></i></button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- review -->
+  <section id="more" class="bg-[#e6d0aa] border-y-4 border-[#5a3a1a] px-6 py-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Card 1 -->
+      <div class="flex items-start gap-4 px-6 py-4 lg:border-r border-[#b89a70]">
+
+        <img src="./images/curated.png" alt="" class="w-20 h-20 object-contain">
+
+        <div>
+          <h3 class="font-bold uppercase text-[#3a2410] text-lg">
+            Carefully Curated
+          </h3>
+
+          <p class="text-[#5c4321] text-sm leading-relaxed mt-2">
+            Handpicked books for curious minds and adventurous hearts.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Card 2 -->
+      <div class="flex items-start gap-4 px-6 py-4 lg:border-r border-[#b89a70]">
+
+        <img src="./images/box.png" alt="" class="w-14 h-20 object-contain">
+
+        <div>
+          <h3 class="font-bold uppercase text-[#3a2410] text-lg">
+            Packed With Care
+          </h3>
+
+          <p class="text-[#5c4321] text-sm leading-relaxed mt-2">
+            Thoughtful packaging worthy of the treasures within.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex items-start gap-4 px-6 py-4 lg:border-r border-[#b89a70]">
+
+        <img src="./images/seal.png" alt="" class="w-14 h-20 object-contain">
+
+        <div>
+          <h3 class="font-bold uppercase text-[#3a2410] text-lg">
+            Loyalty Rewards
+          </h3>
+
+          <p class="text-[#5c4321] text-sm leading-relaxed mt-2">
+            Earn points, unlock perks, and get early access to special editions.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flex items-start gap-4 px-6 py-4">
+
+        <img src="./images/feather.png" alt="" class="w-14 h-20 object-contain">
+
+        <div>
+          <h3 class="font-bold uppercase text-[#3a2410] text-lg">
+            For Dreamers
+          </h3>
+
+          <p class="text-[#5c4321] text-sm leading-relaxed mt-2">
+            Fuel your imagination. One page at a time.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- footer -->
+  <footer id="contact" class="bg-[#120d08] border-t-4 border-[#6b4f1e] text-[#d4a373] py-16 px-6">
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-4">
+
+      <!-- Brand -->
+      <div>
+        <img src="./images/castle.png" alt="Castle" class="w-35 mb-4">
+
+        <h3 class="text-2xl font-serif mb-3">
+         OWLNEST BOOKS
+        </h3>
+
+        <p class="text-sm leading-7 text-[#c3a170]">
+          We believe in the power of stories to inspire,
+          challenge, and transform.
+        </p>
+
+        <div class="flex gap-4 mt-6 text-xl mb-4">
+         <a href="instagram.com" > <i class="fa-brands fa-instagram"></i></a>
+          <a><i class="fa-brands fa-facebook-f"></i></a>
+         <a> <i class="fa-brands fa-twitter"></i></a>
+          <a><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+      <!-- Shop -->
+      <div>
+        <h4 class="uppercase font-semibold tracking-wider mb-4">
+          Shop
+        </h4>
+
+        <ul class="space-y-3 text-[#c3a170]">
+          <li><a href="#">All Books</a></li>
+          <li><a href="#">New Arrivals</a></li>
+          <li><a href="#">Bestsellers</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+
+      <!-- contact -->
+      <div>
+        <h4 class="uppercase font-semibold tracking-wider mb-4">
+          Help
+        </h4>
+
+        <ul class="space-y-3 text-[#c3a170]">
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Track Order</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- About -->
+      <div>
+        <h4 class="uppercase font-semibold tracking-wider mb-4">
+          About
+        </h4>
+
+        <ul class="space-y-3 text-[#c3a170]">
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Sustainability</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="uppercase font-semibold tracking-wider mb-4">
+          Join Our Circle
+        </h4>
+
+        <p class="text-sm text-[#c3a170] mb-5">
+          Get stories, updates, and special offers
+          delivered to your inbox.
+        </p>
+
+        <input type="email" placeholder="Enter your email"
+          class="w-full bg-transparent border border-[#6b4f1e] px-4 py-3 text-[#d4a373] placeholder:text-[#8f744a] focus:outline-none">
+
+        <button class="mt-4  px-8 py-3 border border-[#6b4f1e] bg-[#2a1c06] hover:bg-[#3b2710] transition">
+          Subscribe
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Divider -->
+    <div class="w-full border-t border-[#6b4f1e] mt-24 pt-6">
+      <p class="text-center text-[#b6905b] text-sm">
+        © 2024 The Elder Page. All rights reserved.
+      </p>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

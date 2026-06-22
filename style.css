@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Cinzel", serif;
+}
+/* ─── NavBar ────────────────── */
+.navBar {
+  background: #1a1208;
+  border-bottom: 1px solid #4a3a1a;
+   position: fixed;   
+   top:0;
+    left:0;
+    width:100%;
+    z-index:999;
+   
+
+}
+ 
+/* ── Hero Section ─────────────────────────────────── */
+.hero-section {
+   
+  background-color: #1a0f04;
+}
+ 
+.hero-bg-image {
+  background-image: url('https://i.pinimg.com/736x/1f/27/77/1f277723429f1b23e30686472ace141d.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+}
+ 
+.hero-overlay {
+  background: linear-gradient(
+    to right,
+    rgba(15, 8, 2, 0.95) 0%,
+    rgba(15, 8, 2, 0.75) 40%,
+    rgba(15, 8, 2, 0.10) 100%
+  );
+}
+ 
+.hero-title {
+  font-size: clamp(28px, 5vw, 52px);
+}
+ 
+.hero-subtitle {
+  font-family: 'EB Garamond', serif;
+}
+ 
+
+ 
+/* ════════════════════════════════════════════════════
+   SECTION 1 — Shop by Realm  (parchment)
+════════════════════════════════════════════════════ */
+ .realm-carousel{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:20px 0;
+
+    scrollbar-width:thin; /* Firefox */
+    scroll-behavior:smooth;
+}
+
+.realm-carousel::-webkit-scrollbar{
+    height:8px;
+}
+
+.realm-carousel::-webkit-scrollbar-track{
+    background:#d8c29a;
+}
+
+.realm-carousel::-webkit-scrollbar-thumb{
+    background:#8b6a3e;
+    border-radius:999px;
+}
+
+.realm-card{
+    flex:0 0 220px;
+}
+.realm-section {
+  background-color: #e8dcc0;
+  border-top: 2px solid #a0845a;
+  border-bottom: 2px solid #a0845a;
+  padding: 2.5rem 0 2rem;
+  overflow: hidden;
+}
+ 
+/* Header */
+.realm-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 2rem;
+  padding: 0 2rem;
+}
+ 
+.realm-header-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: #8a6828;
+}
+ 
+.realm-ornament {
+  color: #8a6828;
+  font-size: 16px;
+}
+ 
+.realm-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(15px, 2.2vw, 21px);
+  font-weight: 600;
+  color: #3a2810;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+ 
+/* Scroll track — CSS snap */
+.realm-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;           /* Firefox */
+  gap: 0;
+  padding: 0 1.5rem 0.5rem;
+  cursor: grab;
+}
+ 
+.realm-track::-webkit-scrollbar { display: none; }
+.realm-track:active              { cursor: grabbing; }
+ 
+/* Each category */
+.realm-item {
+  flex: 0 0 calc(100% / 6);
+  min-width: 130px;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem 0.75rem;
+  cursor: pointer;
+  position: relative;
+  transition: opacity 0.2s;
+}
+ 
+.realm-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 12%;
+  height: 76%;
+  width: 1px;
+  background: #b09060;
+  opacity: 0.45;
+}
+ 
+.realm-item:hover { opacity: 0.72; }
+ 
+.realm-icon {
+  width: 84px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
+.realm-icon svg { width: 100%; height: 100%; }
+ 
+.realm-divider {
+  width: 1px;
+  height: 26px;
+  background: #8a6828;
+  opacity: 0.38;
+  margin: 9px 0 7px;
+}
+ 
+.realm-name {
+  font-family: 'Cinzel', serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #2a1c08;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.3;
+}
+ 
+.realm-sub {
+  font-family: 'EB Garamond', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #6b4f1e;
+  text-align: center;
+  margin-top: 3px;
+}
+
+.realm-section{
+    background: #e8d2ac;
+    border: 8px solid #4a2d14;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.realm-title{
+    text-align:center;
+    font-size:32px;
+    color:#3b2410;
+    letter-spacing:2px;
+    margin-bottom:40px;
+    font-family: "Cinzel", serif;
+}
+
+.realm-carousel{
+    scroll-behavior:smooth;
+    padding:10px 50px;
+}
+
+.realm-card{
+    min-width:180px;
+    text-align:center;
+    padding:20px;
+    border-right:1px solid rgba(0,0,0,0.2);
+    flex-shrink:0;
+    transition:.3s;
+}
+
+.realm-card:hover{
+    transform:translateY(-5px);
+}
+
+.realm-card img{
+    width:90px;
+    height:90px;
+    margin:auto;
+    object-fit:contain;
+    margin-bottom:15px;
+    filter: sepia(70%);
+}
+
+.realm-card h3{
+    color:#2A1C06;
+    font-size:20px;
+    margin-bottom:6px;
+    font-family: "Cinzel", serif;
+}
+
+.realm-card p{
+    color:#5d4630;
+    font-size:14px;
+}
+
+.nav-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:none;
+    border:none;
+    font-size:32px;
+    color:#3b2410;
+    cursor:pointer;
+    z-index:10;
+}
+
+.nav-btn:hover{
+    color:#F54927;
+}
+
+.scrollbar-hide::-webkit-scrollbar{
+    display:none;
+}
+
+.scrollbar-hide{
+    -ms-overflow-style:none;
+    scrollbar-width:none;
+} 
+
+/* shop */
+.realm-carousel{
+    display:flex;
+    gap:24px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    padding:20px 0;
+}
+
+.realm-carousel::-webkit-scrollbar{
+    display:none;
+}
+
+.realm-card{
+    min-width:220px;
+    flex-shrink:0;
+    scroll-snap-align:start;
+
+    background:#e7d1ab;
+    border:2px solid #8b6a3e;
+    border-radius:6px;
+
+    padding:16px;
+    text-align:center;
+
+    transition:0.3s;
+}
+
+.realm-card:hover{
+    transform:translateY(-6px);
+}
+
+.realm-card img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+    border-radius:4px;
+    margin-bottom:12px;
+}
+
+.realm-card h3{
+    font-size:1.1rem;
+    color:#2a1c06;
+    font-weight:700;
+    text-transform:uppercase;
+}
+
+.realm-card p{
+    color:#5f4726;
+    font-size:0.9rem;
+}
+
+/* shop */
