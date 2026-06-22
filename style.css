@@ -16,7 +16,7 @@
 
 }
  
-/* ── Hero Section ─────────────────────────────────── */
+/* ── Hero Section ──────────────────────────── */
 .hero-section {
    
   background-color: #1a0f04;
@@ -48,9 +48,7 @@
  
 
  
-/* ════════════════════════════════════════════════════
-   SECTION 1 — Shop by Realm  (parchment)
-════════════════════════════════════════════════════ */
+/* ── realm Section ──────────────────────────── */
  .realm-carousel{
     display:flex;
     gap:24px;
@@ -86,7 +84,7 @@
   overflow: hidden;
 }
  
-/* Header */
+
 .realm-header {
   display: flex;
   align-items: center;
@@ -118,13 +116,13 @@
   white-space: nowrap;
 }
  
-/* Scroll track — CSS snap */
+
 .realm-track {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;           /* Firefox */
+  scrollbar-width: none;      
   gap: 0;
   padding: 0 1.5rem 0.5rem;
   cursor: grab;
@@ -133,7 +131,7 @@
 .realm-track::-webkit-scrollbar { display: none; }
 .realm-track:active              { cursor: grabbing; }
  
-/* Each category */
+
 .realm-item {
   flex: 0 0 calc(100% / 6);
   min-width: 130px;
@@ -332,4 +330,4 @@
     font-size:0.9rem;
 }
 
-/* shop */
+
